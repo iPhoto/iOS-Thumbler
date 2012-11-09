@@ -10,4 +10,5 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)pressed:(id)sender;
 @end
