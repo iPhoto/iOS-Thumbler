@@ -28,4 +28,12 @@
 
 - (IBAction)pressed:(id)sender {
 }
+- (IBAction)pressedGPSCamera:(id)sender {
+}
+
+- (IBAction)pressedTVGids:(id)sender {
+}
+
+- (IBAction)pressedMath:(id)sender {
+}
 @end

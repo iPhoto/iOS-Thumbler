@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)pressedGPSCamera:(id)sender;
+- (IBAction)pressedTVGids:(id)sender;
+- (IBAction)pressedMath:(id)sender;
 
-- (IBAction)pressed:(id)sender;
 @end
