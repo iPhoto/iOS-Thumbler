@@ -14,6 +14,17 @@
 
 @implementation ViewController
 
+#pragma mark - View lifecycle
+
+-(IBAction)pageInfo{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info"
+                                                    message:@"Currently displaying view one"
+                                                    delegate:self
+                                                    cancelButtonTitle:@"Ok"
+                                                    otherButtonTitles:nil];
+    [alert show];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,14 +37,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pressed:(id)sender {
-}
-- (IBAction)pressedGPSCamera:(id)sender {
-}
-
-- (IBAction)pressedTVGids:(id)sender {
-}
-
-- (IBAction)pressedMath:(id)sender {
-}
 @end

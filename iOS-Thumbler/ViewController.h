@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-- (IBAction)pressedGPSCamera:(id)sender;
-- (IBAction)pressedTVGids:(id)sender;
-- (IBAction)pressedMath:(id)sender;
+@interface ViewController : UIViewController <UIActionSheetDelegate, UIAlertViewDelegate>
+
+-(IBAction)pageInfo;
 
 @end

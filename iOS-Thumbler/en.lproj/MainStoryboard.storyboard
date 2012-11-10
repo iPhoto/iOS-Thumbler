@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PJg-a0-moj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="5">
+        <!--Navigation Controller-->
+        <scene sceneID="bkc-zg-hAM">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <navigationController definesPresentationContext="YES" id="PJg-a0-moj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xo6-aM-yM3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QBf-71-7xa" kind="relationship" relationship="rootViewController" id="hO0-Ix-XfG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gx-mE-Qg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="-180"/>
+        </scene>
+        <!--View Controller - Menu-->
+        <scene sceneID="TuZ-Li-uaL">
+            <objects>
+                <viewController id="QBf-71-7xa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BxS-VZ-rbK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnp-tE-v5N">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="TV Gids">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressed:" destination="2" eventType="touchUpInside" id="Zjg-HD-1Hb"/>
-                                    <action selector="pressedTVGids:" destination="2" eventType="touchUpInside" id="mVt-Zg-yhU"/>
-                                    <segue destination="eTj-ne-KnJ" kind="modal" id="Dyj-a5-LkQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-Kh-GhG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpf-No-FJz">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="GPS Camera">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,12 +37,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressed:" destination="2" eventType="touchUpInside" id="wIL-hz-sZo"/>
-                                    <action selector="pressedGPSCamera:" destination="2" eventType="touchUpInside" id="qry-g9-VF4"/>
-                                    <segue destination="ulO-nC-hsU" kind="modal" id="hGN-lh-JUM"/>
+                                    <segue destination="1Xc-aU-7Hy" kind="push" id="BcH-Co-KcB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebh-Ix-a9L">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-Gs-XP5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="TV guide">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ccQ-zv-AqD" kind="push" id="rGJ-la-tji"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-Rv-kFR">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Math game">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,118 +63,75 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressed:" destination="2" eventType="touchUpInside" id="WBo-L0-4Gi"/>
-                                    <action selector="pressedMath:" destination="2" eventType="touchUpInside" id="Zel-ut-izm"/>
-                                    <segue destination="9a1-KH-qtR" kind="modal" id="gey-P0-md5"/>
+                                    <segue destination="nOc-Gh-G8l" kind="push" id="Sma-tT-xa8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gaX-Kh-GhG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6QD-Ah-Q6G"/>
-                            <constraint firstItem="gaX-Kh-GhG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CkG-7F-LMp"/>
-                            <constraint firstItem="gaX-Kh-GhG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="28" id="NN2-C4-e4s"/>
-                            <constraint firstItem="Ebh-Ix-a9L" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="UKY-GE-eh2"/>
-                            <constraint firstItem="Ebh-Ix-a9L" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WAz-03-cPi"/>
-                            <constraint firstAttribute="trailing" secondItem="Ebh-Ix-a9L" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WBb-Zl-Fr7"/>
-                            <constraint firstAttribute="trailing" secondItem="dnp-tE-v5N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gYq-KF-7VM"/>
-                            <constraint firstItem="dnp-tE-v5N" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mOi-p4-Stn"/>
-                            <constraint firstItem="dnp-tE-v5N" firstAttribute="top" secondItem="3" secondAttribute="top" constant="115" id="yOB-da-QAh"/>
+                            <constraint firstItem="t1L-Gs-XP5" firstAttribute="centerX" secondItem="Lpf-No-FJz" secondAttribute="centerX" type="default" id="Igp-1r-1zs"/>
+                            <constraint firstItem="Lpf-No-FJz" firstAttribute="top" secondItem="BxS-VZ-rbK" secondAttribute="top" constant="64" id="TUI-qt-hCA"/>
+                            <constraint firstItem="t1L-Gs-XP5" firstAttribute="top" secondItem="BxS-VZ-rbK" secondAttribute="top" constant="171" id="US6-dK-KpO"/>
+                            <constraint firstItem="bNh-Rv-kFR" firstAttribute="centerX" secondItem="t1L-Gs-XP5" secondAttribute="centerX" type="default" id="YS8-43-byk"/>
+                            <constraint firstAttribute="bottom" secondItem="bNh-Rv-kFR" secondAttribute="bottom" constant="104" id="Z9o-yj-igC"/>
+                            <constraint firstItem="t1L-Gs-XP5" firstAttribute="centerX" secondItem="BxS-VZ-rbK" secondAttribute="centerX" type="default" id="beu-TA-aku"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" id="378-n7-7es"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1D-rN-VxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="61"/>
+            <point key="canvasLocation" x="1053" y="-180"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3gP-UP-Ses">
+        <!--View Controller - TVGuide-->
+        <scene sceneID="crs-Va-vTa">
             <objects>
-                <viewController id="ulO-nC-hsU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3v1-91-BJg">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController title="TVGuide" id="ccQ-zv-AqD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mg1-i3-1ZF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS Camera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvT-F1-mC9">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rvT-F1-mC9" firstAttribute="top" secondItem="3v1-91-BJg" secondAttribute="top" constant="42" id="GwB-ZC-Tkb"/>
-                            <constraint firstItem="rvT-F1-mC9" firstAttribute="centerX" secondItem="3v1-91-BJg" secondAttribute="centerX" type="default" id="KLW-Qb-2xT"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TV Guide" id="HEq-Jy-abK"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="alN-Z2-3KJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xM-a9-HpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="-496"/>
+            <point key="canvasLocation" x="1621" y="-176"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="G1A-gS-QF0">
+        <!--View Controller - MathGame-->
+        <scene sceneID="qiT-v6-qIe">
             <objects>
-                <viewController id="eTj-ne-KnJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gKb-bf-Yk5">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController title="MathGame" id="nOc-Gh-G8l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ewn-4u-KW7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TV Gids" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f09-nc-d6L">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="f09-nc-d6L" firstAttribute="centerX" secondItem="gKb-bf-Yk5" secondAttribute="centerX" type="default" id="Zo9-gB-Ube"/>
-                            <constraint firstItem="f09-nc-d6L" firstAttribute="top" secondItem="gKb-bf-Yk5" secondAttribute="top" constant="56" id="jpv-B8-dqk"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Math game" id="7rb-HJ-kGB"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t5T-XS-P8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yr-Qh-xQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="61"/>
+            <point key="canvasLocation" x="1621" y="398"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tht-WG-N0M">
+        <!--View Controller - GPSCamere-->
+        <scene sceneID="sY5-WU-rQF">
             <objects>
-                <viewController id="9a1-KH-qtR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bIg-kM-pSk">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController title="GPSCamere" id="1Xc-aU-7Hy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H95-dL-H7H">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Math" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-IT-FZU">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gsP-IT-FZU" firstAttribute="top" secondItem="bIg-kM-pSk" secondAttribute="top" constant="53" id="Fxw-k8-DcK"/>
-                            <constraint firstItem="gsP-IT-FZU" firstAttribute="centerX" secondItem="bIg-kM-pSk" secondAttribute="centerX" type="default" id="iht-lS-0ey"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="GPS Camera" id="k5b-IX-3h9"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3bq-YH-mgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kE-Tt-yxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="632"/>
+            <point key="canvasLocation" x="1621" y="-759"/>
         </scene>
     </scenes>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressed:"/>
-                <relationship kind="action" name="pressedGPSCamera:"/>
-                <relationship kind="action" name="pressedMath:"/>
-                <relationship kind="action" name="pressedTVGids:"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
