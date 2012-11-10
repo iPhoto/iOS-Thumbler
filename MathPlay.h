@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  MathPlay.h
 //  iOS-Thumbler
 //
 //  Created by Dominick Swinnen on 10/11/12.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController <UIActionSheetDelegate, UIAlertViewDelegate>
+@interface MathPlay : UIViewController
 
--(IBAction)pageInfo;
+-(IBAction)quitPressed;
 
 @end

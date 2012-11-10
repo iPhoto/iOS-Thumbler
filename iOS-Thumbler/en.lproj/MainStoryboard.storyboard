@@ -63,7 +63,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nOc-Gh-G8l" kind="push" id="Sma-tT-xa8"/>
+                                    <segue destination="nOc-Gh-G8l" kind="push" identifier="GoToMathMenu" id="Sma-tT-xa8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="1621" y="-176"/>
         </scene>
-        <!--View Controller - MathGame-->
+        <!--Math Menu - MathGame-->
         <scene sceneID="qiT-v6-qIe">
             <objects>
-                <viewController title="MathGame" id="nOc-Gh-G8l" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ewn-4u-KW7">
+                <viewController title="MathGame" id="nOc-Gh-G8l" customClass="MathMenu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="" id="ewn-4u-KW7">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -119,7 +119,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F90-uq-bS1" kind="modal" id="Hm9-sh-lSd"/>
+                                    <segue destination="F90-uq-bS1" kind="modal" id="7lj-Va-VDL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-hr-1T8">
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1621" y="398"/>
         </scene>
-        <!--View Controller - Play-->
+        <!--Math Play - Play-->
         <scene sceneID="oE2-JC-ddC">
             <objects>
-                <viewController title="Play" id="F90-uq-bS1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="" title="Play" id="F90-uq-bS1" customClass="MathPlay" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jya-yL-1CN">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -178,7 +178,11 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6O-Cu-ewS">
                                 <items>
                                     <navigationItem title="PLAY" id="Tsr-CE-NmA">
-                                        <barButtonItem key="leftBarButtonItem" title="Quit" id="DoX-vC-oNb"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Quit" id="DoX-vC-oNb">
+                                            <connections>
+                                                <action selector="quitPressed" destination="F90-uq-bS1" id="VZ4-2b-QnT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -262,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFf-1R-bwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="398"/>
+            <point key="canvasLocation" x="2140" y="46"/>
         </scene>
         <!--View Controller - Options-->
         <scene sceneID="uxH-qz-8uW">
@@ -373,6 +377,15 @@
         </scene>
     </scenes>
     <classes>
+        <class className="MathMenu" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MathMenu.h"/>
+        </class>
+        <class className="MathPlay" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MathPlay.h"/>
+            <relationships>
+                <relationship kind="action" name="quitPressed"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
