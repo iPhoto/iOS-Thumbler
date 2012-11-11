@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFf-1R-bwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="46"/>
+            <point key="canvasLocation" x="1621" y="982"/>
         </scene>
         <!--View Controller - Options-->
         <scene sceneID="uxH-qz-8uW">
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHz-OP-PdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="398"/>
+            <point key="canvasLocation" x="1621" y="1590"/>
         </scene>
         <!--View Controller - Highscore-->
         <scene sceneID="VE6-qf-SKr">
@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUx-iz-EeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="1571"/>
+            <point key="canvasLocation" x="2516" y="982"/>
         </scene>
         <!--View Controller - GPSCamere-->
         <scene sceneID="sY5-WU-rQF">

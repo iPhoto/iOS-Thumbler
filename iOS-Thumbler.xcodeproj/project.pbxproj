@@ -17,12 +17,9 @@
 		7AA604B2164A8D330045331B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AA604B1164A8D330045331B /* Default@2x.png */; };
 		7AA604B4164A8D330045331B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AA604B3164A8D330045331B /* Default-568h@2x.png */; };
 		7AA604B7164A8D330045331B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA604B5164A8D330045331B /* MainStoryboard.storyboard */; };
-		7AA604BA164A8D330045331B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA604B9164A8D330045331B /* ViewController.m */; };
 		7AA604C2164A8D330045331B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA604C1164A8D330045331B /* SenTestingKit.framework */; };
 		7AA604C3164A8D330045331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049D164A8D330045331B /* UIKit.framework */; };
 		7AA604C4164A8D330045331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049F164A8D330045331B /* Foundation.framework */; };
-		7AA604CC164A8D330045331B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AA604CA164A8D330045331B /* InfoPlist.strings */; };
-		7AA604CF164A8D330045331B /* iOS_ThumblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA604CE164A8D330045331B /* iOS_ThumblerTests.m */; };
 		E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF1164F0DBB00F83830 /* MathPlay.m */; };
 		E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF4164F1DAA00F83830 /* MathMenu.m */; };
 /* End PBXBuildFile section */
@@ -52,18 +49,12 @@
 		7AA604B1164A8D330045331B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7AA604B3164A8D330045331B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7AA604B6164A8D330045331B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		7AA604B8164A8D330045331B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7AA604B9164A8D330045331B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7AA604C0164A8D330045331B /* iOS-ThumblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-ThumblerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA604C1164A8D330045331B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7AA604C9164A8D330045331B /* iOS-ThumblerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-ThumblerTests-Info.plist"; sourceTree = "<group>"; };
-		7AA604CB164A8D330045331B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7AA604CD164A8D330045331B /* iOS_ThumblerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_ThumblerTests.h; sourceTree = "<group>"; };
-		7AA604CE164A8D330045331B /* iOS_ThumblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_ThumblerTests.m; sourceTree = "<group>"; };
-		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathPlay.h; sourceTree = "<group>"; };
-		E618ACF1164F0DBB00F83830 /* MathPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathPlay.m; sourceTree = "<group>"; };
-		E618ACF3164F1DAA00F83830 /* MathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathMenu.h; sourceTree = "<group>"; };
-		E618ACF4164F1DAA00F83830 /* MathMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathMenu.m; sourceTree = "<group>"; };
+		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathPlay.h; path = ../MathPlay.h; sourceTree = "<group>"; };
+		E618ACF1164F0DBB00F83830 /* MathPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathPlay.m; path = ../MathPlay.m; sourceTree = "<group>"; };
+		E618ACF3164F1DAA00F83830 /* MathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathMenu.h; path = ../MathMenu.h; sourceTree = "<group>"; };
+		E618ACF4164F1DAA00F83830 /* MathMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathMenu.m; path = ../MathMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +84,7 @@
 		7AA6048E164A8D320045331B = {
 			isa = PBXGroup;
 			children = (
-				E618ACF3164F1DAA00F83830 /* MathMenu.h */,
-				E618ACF4164F1DAA00F83830 /* MathMenu.m */,
-				E618ACF0164F0DBB00F83830 /* MathPlay.h */,
-				E618ACF1164F0DBB00F83830 /* MathPlay.m */,
 				7AA604A3164A8D330045331B /* iOS-Thumbler */,
-				7AA604C7164A8D330045331B /* iOS-ThumblerTests */,
 				7AA6049C164A8D330045331B /* Frameworks */,
 				7AA6049A164A8D330045331B /* Products */,
 			);
@@ -127,11 +113,12 @@
 		7AA604A3164A8D330045331B /* iOS-Thumbler */ = {
 			isa = PBXGroup;
 			children = (
+				E61A108F164FC048003B1465 /* GPSCamera */,
+				E61A108E164FC041003B1465 /* TVGuide */,
+				E61A108D164FBFE3003B1465 /* MathGame */,
 				7AA604AC164A8D330045331B /* AppDelegate.h */,
 				7AA604AD164A8D330045331B /* AppDelegate.m */,
 				7AA604B5164A8D330045331B /* MainStoryboard.storyboard */,
-				7AA604B8164A8D330045331B /* ViewController.h */,
-				7AA604B9164A8D330045331B /* ViewController.m */,
 				7AA604A4164A8D330045331B /* Supporting Files */,
 			);
 			path = "iOS-Thumbler";
@@ -151,23 +138,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7AA604C7164A8D330045331B /* iOS-ThumblerTests */ = {
+		E61A108D164FBFE3003B1465 /* MathGame */ = {
 			isa = PBXGroup;
 			children = (
-				7AA604CD164A8D330045331B /* iOS_ThumblerTests.h */,
-				7AA604CE164A8D330045331B /* iOS_ThumblerTests.m */,
-				7AA604C8164A8D330045331B /* Supporting Files */,
+				E618ACF3164F1DAA00F83830 /* MathMenu.h */,
+				E618ACF4164F1DAA00F83830 /* MathMenu.m */,
+				E618ACF0164F0DBB00F83830 /* MathPlay.h */,
+				E618ACF1164F0DBB00F83830 /* MathPlay.m */,
 			);
-			path = "iOS-ThumblerTests";
+			name = MathGame;
 			sourceTree = "<group>";
 		};
-		7AA604C8164A8D330045331B /* Supporting Files */ = {
+		E61A108E164FC041003B1465 /* TVGuide */ = {
 			isa = PBXGroup;
 			children = (
-				7AA604C9164A8D330045331B /* iOS-ThumblerTests-Info.plist */,
-				7AA604CA164A8D330045331B /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			name = TVGuide;
+			sourceTree = "<group>";
+		};
+		E61A108F164FC048003B1465 /* GPSCamera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GPSCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA604CC164A8D330045331B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +274,6 @@
 			files = (
 				7AA604AA164A8D330045331B /* main.m in Sources */,
 				7AA604AE164A8D330045331B /* AppDelegate.m in Sources */,
-				7AA604BA164A8D330045331B /* ViewController.m in Sources */,
 				E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */,
 				E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */,
 			);
@@ -292,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA604CF164A8D330045331B /* iOS_ThumblerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +311,6 @@
 				7AA604B6164A8D330045331B /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		7AA604CA164A8D330045331B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AA604CB164A8D330045331B /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
