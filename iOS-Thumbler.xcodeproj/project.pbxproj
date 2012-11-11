@@ -20,6 +20,7 @@
 		7AA604C2164A8D330045331B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA604C1164A8D330045331B /* SenTestingKit.framework */; };
 		7AA604C3164A8D330045331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049D164A8D330045331B /* UIKit.framework */; };
 		7AA604C4164A8D330045331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049F164A8D330045331B /* Foundation.framework */; };
+		7AF0B5C9164FF4C500A829A0 /* TVGuideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */; };
 		E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF1164F0DBB00F83830 /* MathPlay.m */; };
 		E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF4164F1DAA00F83830 /* MathMenu.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		7AA604B6164A8D330045331B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7AA604C0164A8D330045331B /* iOS-ThumblerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-ThumblerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA604C1164A8D330045331B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7AF0B5C7164FF4C500A829A0 /* TVGuideMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVGuideMain.h; sourceTree = "<group>"; };
+		7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVGuideMain.m; sourceTree = "<group>"; };
 		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathPlay.h; path = ../MathPlay.h; sourceTree = "<group>"; };
 		E618ACF1164F0DBB00F83830 /* MathPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathPlay.m; path = ../MathPlay.m; sourceTree = "<group>"; };
 		E618ACF3164F1DAA00F83830 /* MathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathMenu.h; path = ../MathMenu.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 		E61A108E164FC041003B1465 /* TVGuide */ = {
 			isa = PBXGroup;
 			children = (
+				7AF0B5C7164FF4C500A829A0 /* TVGuideMain.h */,
+				7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */,
 			);
 			name = TVGuide;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				7AA604AE164A8D330045331B /* AppDelegate.m in Sources */,
 				E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */,
 				E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */,
+				7AF0B5C9164FF4C500A829A0 /* TVGuideMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
