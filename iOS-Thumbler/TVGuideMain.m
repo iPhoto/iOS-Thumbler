@@ -56,14 +56,14 @@
     @try {
         // Try something
         // 1
-        NSURL *programmasUrl = [NSURL URLWithString:@"http://www.raywenderlich.com/tutorials"];
+        NSURL *programmasUrl = [NSURL URLWithString:@"http://www.mtv.com/ontv/schedule/"];
         NSData *programmasHtmlData = [NSData dataWithContentsOfURL:programmasUrl];
         
         // 2
         TFHpple *programmasParser = [TFHpple hppleWithHTMLData:programmasHtmlData];
         
         // 3
-        NSString *programmasXpathQueryString = @"//*[@id='schedule']/tbody/tr[2]";
+        NSString *programmasXpathQueryString = @"//*[@id='schedule']/tbody/tr";
         NSArray *programmasNodes = [programmasParser searchWithXPathQuery:programmasXpathQueryString];
         
         // 4
