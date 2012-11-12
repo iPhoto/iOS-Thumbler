@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1BF4FC1651368300803036 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1BF4FB1651368300803036 /* SystemConfiguration.framework */; };
+		4E1BF50E1651526800803036 /* Programma.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BF50D1651526800803036 /* Programma.m */; };
+		4E1BF5161651538700803036 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BF5111651538700803036 /* TFHpple.m */; };
+		4E1BF5171651538700803036 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BF5131651538700803036 /* TFHppleElement.m */; };
+		4E1BF5181651538700803036 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BF5151651538700803036 /* XPathQuery.m */; };
+		4E1BF51C16515CE800803036 /* TVGuideDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1BF51A16515CE800803036 /* TVGuideDetailViewController.h */; };
+		4E1BF51D16515CE800803036 /* TVGuideDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BF51B16515CE800803036 /* TVGuideDetailViewController.m */; };
 		7AA6049E164A8D330045331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049D164A8D330045331B /* UIKit.framework */; };
 		7AA604A0164A8D330045331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049F164A8D330045331B /* Foundation.framework */; };
 		7AA604A2164A8D330045331B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA604A1164A8D330045331B /* CoreGraphics.framework */; };
@@ -36,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1BF4FB1651368300803036 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E1BF50C1651526800803036 /* Programma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Programma.h; sourceTree = "<group>"; };
+		4E1BF50D1651526800803036 /* Programma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Programma.m; sourceTree = "<group>"; };
+		4E1BF5101651538700803036 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		4E1BF5111651538700803036 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		4E1BF5121651538700803036 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		4E1BF5131651538700803036 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		4E1BF5141651538700803036 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		4E1BF5151651538700803036 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		4E1BF51A16515CE800803036 /* TVGuideDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVGuideDetailViewController.h; sourceTree = "<group>"; };
+		4E1BF51B16515CE800803036 /* TVGuideDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVGuideDetailViewController.m; sourceTree = "<group>"; };
 		7AA60499164A8D330045331B /* iOS-Thumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Thumbler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA6049D164A8D330045331B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7AA6049F164A8D330045331B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1BF4FC1651368300803036 /* SystemConfiguration.framework in Frameworks */,
 				7AA6049E164A8D330045331B /* UIKit.framework in Frameworks */,
 				7AA604A0164A8D330045331B /* Foundation.framework in Frameworks */,
 				7AA604A2164A8D330045331B /* CoreGraphics.framework in Frameworks */,
@@ -84,9 +103,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1BF50B1651525300803036 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E1BF50C1651526800803036 /* Programma.h */,
+				4E1BF50D1651526800803036 /* Programma.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4E1BF50F1651535E00803036 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				4E1BF5101651538700803036 /* TFHpple.h */,
+				4E1BF5111651538700803036 /* TFHpple.m */,
+				4E1BF5121651538700803036 /* TFHppleElement.h */,
+				4E1BF5131651538700803036 /* TFHppleElement.m */,
+				4E1BF5141651538700803036 /* XPathQuery.h */,
+				4E1BF5151651538700803036 /* XPathQuery.m */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
 		7AA6048E164A8D320045331B = {
 			isa = PBXGroup;
 			children = (
+				4E1BF4FB1651368300803036 /* SystemConfiguration.framework */,
 				7AA604A3164A8D330045331B /* iOS-Thumbler */,
 				7AA6049C164A8D330045331B /* Frameworks */,
 				7AA6049A164A8D330045331B /* Products */,
@@ -155,8 +197,12 @@
 		E61A108E164FC041003B1465 /* TVGuide */ = {
 			isa = PBXGroup;
 			children = (
+				4E1BF50F1651535E00803036 /* hpple */,
+				4E1BF50B1651525300803036 /* Model */,
 				7AF0B5C7164FF4C500A829A0 /* TVGuideMain.h */,
 				7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */,
+				4E1BF51A16515CE800803036 /* TVGuideDetailViewController.h */,
+				4E1BF51B16515CE800803036 /* TVGuideDetailViewController.m */,
 			);
 			name = TVGuide;
 			sourceTree = "<group>";
@@ -170,6 +216,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4E1BF519165153BB00803036 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E1BF51C16515CE800803036 /* TVGuideDetailViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		7AA60498164A8D330045331B /* iOS-Thumbler */ = {
 			isa = PBXNativeTarget;
@@ -178,6 +235,7 @@
 				7AA60495164A8D330045331B /* Sources */,
 				7AA60496164A8D330045331B /* Frameworks */,
 				7AA60497164A8D330045331B /* Resources */,
+				4E1BF519165153BB00803036 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -282,6 +340,11 @@
 				E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */,
 				E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */,
 				7AF0B5C9164FF4C500A829A0 /* TVGuideMain.m in Sources */,
+				4E1BF50E1651526800803036 /* Programma.m in Sources */,
+				4E1BF5161651538700803036 /* TFHpple.m in Sources */,
+				4E1BF5171651538700803036 /* TFHppleElement.m in Sources */,
+				4E1BF5181651538700803036 /* XPathQuery.m in Sources */,
+				4E1BF51D16515CE800803036 /* TVGuideDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +440,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-Thumbler/iOS-Thumbler-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "iOS-Thumbler/iOS-Thumbler-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -388,7 +453,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-Thumbler/iOS-Thumbler-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "iOS-Thumbler/iOS-Thumbler-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
