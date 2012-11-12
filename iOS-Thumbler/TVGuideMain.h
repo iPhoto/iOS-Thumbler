@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
-@interface TVGuideMainViewController : UIViewController {
+@interface TVGuideMain : UIViewController {
     UIActivityIndicatorView *pbarLoading;
     UILabel *lblStatus;
     UIButton *btnStartDownload;

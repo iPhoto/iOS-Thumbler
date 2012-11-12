@@ -8,11 +8,11 @@
 
 #import "TVGuideMain.h"
 
-@interface TVGuideMainViewController ()
+@interface TVGuideMain ()
 
 @end
 
-@implementation TVGuideMainViewController
+@implementation TVGuideMain
 @synthesize lblStatus;
 @synthesize pbarLoading;
 @synthesize btnStartDownload;
@@ -22,6 +22,8 @@
     //check if device is online
     if ([self isOnline]) {
         lblStatus.text = @"Device is online.";
+        UIViewController *TVGuideDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TVGuideDetailView"];
+        [self presentViewController:TVGuideDetailViewController animated:YES completion:nil];
     } else {
         lblStatus.text = @"Device is offline.";
     }
