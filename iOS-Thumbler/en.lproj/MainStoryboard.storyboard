@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PJg-a0-moj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PJg-a0-moj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -92,6 +92,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="lblStatus" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-fj-Hmc">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="dli-pl-awV"/>
                                     <constraint firstAttribute="height" constant="41" id="eSg-ll-6Yc"/>
@@ -116,8 +119,9 @@
                                     <action selector="startDownloadPressed" destination="ccQ-zv-AqD" eventType="touchDown" id="XsZ-Um-b6Y"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" restorationIdentifier="pbarLoading" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-dr-vHd">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" restorationIdentifier="pbarLoading" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-dr-vHd">
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

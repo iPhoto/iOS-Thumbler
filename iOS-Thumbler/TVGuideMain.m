@@ -23,32 +23,37 @@
 -(IBAction)startDownloadPressed{
     //check if device is online
     if ([self isOnline]) {
-        lblStatus.text = @"Device is online.";
-        lblStatus.hidden = false;
+        NSLog(@"Info: %@", @"Device is online.");
+        
+        [self.lblStatus setText:@"Device is online."];
+        
         dispatch_queue_t queue = dispatch_queue_create("be.phl.iOS-Thumbler", NULL);
         dispatch_async(queue, ^{
             //code to executed in the background
-            pbarLoading.hidden = false;
             [self doTask];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 //code to be executed on the main thread when background task is finished
-                pbarLoading.hidden = true;
                 if (taskSucces) {
-                    lblStatus.text = @"Download was succesfull.";                    
+                    [self.lblStatus setText:@"Download was succesfull."];
+                    NSLog(@"Info: %@", @"Download was succesfull.");
+                    
                     //load new view and pass data to it
                     UIViewController *TVGuideDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TVGuideDetailViewID"];
                     
                     [self presentViewController:TVGuideDetailViewController animated:YES completion:nil];
                 } else {
-                    lblStatus.text = @"Something went wrong.";
+                    [self.lblStatus setText:@"Something went wrong."];
+                    [self.btnStartDownload setTitle:@"Retry?" forState:UIControlStateNormal];
+                    NSLog(@"Info: %@", @"Something went wrong.");
                 }
             });
         });
         dispatch_sync(queue, ^{});
     } else {
-        lblStatus.text = @"Device is offline.";
-        lblStatus.hidden = false;
+        NSLog(@"Info: %@", @"Something went wrong.");
+        
+        [self.lblStatus setText:@"Device is offline."];
     }
 }
 
@@ -68,32 +73,35 @@
         
         // 4
         NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:0];
-        for (TFHppleElement *element in programmasNodes) {
-            // 5
-            Programma *programma = [[Programma alloc] init];
-            [newProgrammas addObject:programma];
+        if (programmasNodes.count > 0) {
+            for (TFHppleElement *element in programmasNodes) {
+                // 5
+                Programma *programma = [[Programma alloc] init];
+                [newProgrammas addObject:programma];
+                
+                // 6
+                //programma.tijd = [[element firstChild] content];
+                //programma.titel = [element objectForKey:@"href"];
+                //programma.omschrijving = @"Test omschrijving";
+                //programma.rating = @"MTV-14";
+                programma.tijd = @"Test tijd";
+                programma.titel = @"Test titel";
+                programma.omschrijving = @"Test omschrijving";
+                programma.rating = @"MTV-14";
+            }
             
-            // 6
-            //programma.tijd = [[element firstChild] content];
-            //programma.titel = [element objectForKey:@"href"];
-            //programma.omschrijving = @"Test omschrijving";
-            //programma.rating = @"MTV-14";
-            programma.tijd = @"Test tijd";
-            programma.titel = @"Test titel";
-            programma.omschrijving = @"Test omschrijving";
-            programma.rating = @"MTV-14";
+            // 7
+            _objects = newProgrammas;
+            taskSucces = true;
+            
+        } else {
+            taskSucces = false;
         }
-        
-        // 7
-        _objects = newProgrammas;
-        taskSucces = true;
     }
     @catch (NSException * e) {
         taskSucces = false;
         NSLog(@"Exception: %@", e);
     }
-    
-    
 }
 
 -(bool) isOnline {
@@ -126,6 +134,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
     taskSucces = false;
 }
