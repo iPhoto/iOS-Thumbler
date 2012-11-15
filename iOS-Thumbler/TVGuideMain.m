@@ -23,29 +23,30 @@
 -(IBAction)startDownloadPressed{
     //check if device is online
     if ([self isOnline]) {
-        NSLog(@"Info: %@", @"Device is online.");
-        
-        [self.lblStatus setText:@"Device is online."];
+        [lblStatus setText:@"Device is online."];
+        [lblStatus setHidden:false];
         
         dispatch_queue_t queue = dispatch_queue_create("be.phl.iOS-Thumbler", NULL);
         dispatch_async(queue, ^{
             //code to executed in the background
+            [lblStatus setText:@"Downloading data..."];
+            [pbarLoading setHidden:false];
             [self doTask];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 //code to be executed on the main thread when background task is finished
                 if (taskSucces) {
-                    [self.lblStatus setText:@"Download was succesfull."];
-                    NSLog(@"Info: %@", @"Download was succesfull.");
+                    [lblStatus setText:@"Download was succesfull."];
+                    [pbarLoading setHidden:true];
                     
                     //load new view and pass data to it
                     UIViewController *TVGuideDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TVGuideDetailViewID"];
                     
                     [self presentViewController:TVGuideDetailViewController animated:YES completion:nil];
                 } else {
-                    [self.lblStatus setText:@"Something went wrong."];
-                    [self.btnStartDownload setTitle:@"Retry?" forState:UIControlStateNormal];
-                    NSLog(@"Info: %@", @"Something went wrong.");
+                    [lblStatus setText:@"Something went wrong."];
+                    [pbarLoading setHidden:true];
+                    [btnStartDownload setTitle:@"Retry?" forState:UIControlStateNormal];
                 }
             });
         });
@@ -53,7 +54,7 @@
     } else {
         NSLog(@"Info: %@", @"Something went wrong.");
         
-        [self.lblStatus setText:@"Device is offline."];
+        [lblStatus setText:@"Device is offline."];
     }
 }
 
@@ -72,23 +73,44 @@
         NSArray *programmasNodes = [programmasParser searchWithXPathQuery:programmasXpathQueryString];
         
         // 4
-        NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:0];
-        if (programmasNodes.count > 0) {
-            for (TFHppleElement *element in programmasNodes) {
+        NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:programmasNodes.count];
+//        if (programmasNodes.count > 0) {
+//            for (TFHppleElement *element in programmasNodes) {
+//                // 5
+//                Programma *programma = [[Programma alloc] init];
+//                
+//                // 6
+//                //programma.tijd = [[element firstChild] content];
+//                //programma.titel = [element objectForKey:@"href"];
+//                //programma.omschrijving = @"Test omschrijving";
+//                //programma.rating = @"MTV-14";
+//                programma.tijd = @"Test tijd";
+//                programma.titel = @"Test titel";
+//                programma.omschrijving = @"Test omschrijving";
+//                programma.rating = @"MTV-14";
+//                
+//                [newProgrammas addObject:programma];
+//            }
+        
+        if (true) {
+            //10 test objecten!
+            for (int i = 0; i <= 10; i++) {
                 // 5
                 Programma *programma = [[Programma alloc] init];
-                [newProgrammas addObject:programma];
                 
                 // 6
                 //programma.tijd = [[element firstChild] content];
                 //programma.titel = [element objectForKey:@"href"];
                 //programma.omschrijving = @"Test omschrijving";
                 //programma.rating = @"MTV-14";
-                programma.tijd = @"Test tijd";
+                programma.tijd = [NSString stringWithFormat:@"Tijd: %d", i];;
                 programma.titel = @"Test titel";
                 programma.omschrijving = @"Test omschrijving";
-                programma.rating = @"MTV-14";
+                programma.rating = @"Test rating";
+                
+                [newProgrammas addObject:programma];
             }
+
             
             // 7
             _objects = newProgrammas;
@@ -137,6 +159,8 @@
     
 	// Do any additional setup after loading the view.
     taskSucces = false;
+    [lblStatus setHidden:true];
+    [pbarLoading setHidden:true];
 }
 
 - (void)didReceiveMemoryWarning

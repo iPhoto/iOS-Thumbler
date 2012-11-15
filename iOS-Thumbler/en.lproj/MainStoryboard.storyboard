@@ -135,6 +135,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TV Guide" id="HEq-Jy-abK"/>
+                    <connections>
+                        <outlet property="btnStartDownload" destination="Gfq-02-Dvz" id="ac1-Fk-quS"/>
+                        <outlet property="lblStatus" destination="Uyz-fj-Hmc" id="fvK-b0-i50"/>
+                        <outlet property="pbarLoading" destination="v4f-dr-vHd" id="6ne-DK-IdE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xM-a9-HpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

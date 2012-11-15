@@ -11,9 +11,6 @@
 
 
 @interface TVGuideMain : UIViewController {
-    UIActivityIndicatorView *pbarLoading;
-    UILabel *lblStatus;
-    UIButton *btnStartDownload;
     BOOL taskSucces;
     NSMutableArray *_objects;
 }
