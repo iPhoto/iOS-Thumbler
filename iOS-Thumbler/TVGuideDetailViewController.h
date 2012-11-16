@@ -10,4 +10,7 @@
 
 @interface TVGuideDetailViewController : UITableViewController
 
+@property(nonatomic) NSMutableArray *_objectsB;
+- (id)initWithObjects:(NSMutableArray *)programmaObjects;
+
 @end

@@ -12,7 +12,7 @@
 
 @interface TVGuideMain : UIViewController {
     BOOL taskSucces;
-    NSMutableArray *_objects;
+    NSMutableArray *_objectsA;
 }
 
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView *pbarLoading;

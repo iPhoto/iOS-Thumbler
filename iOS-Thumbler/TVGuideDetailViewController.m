@@ -8,7 +8,6 @@
 
 #import "TVGuideDetailViewController.h"
 #import "Programma.h"
-#import "TVGuideMain.h"
 
 @interface TVGuideDetailViewController ()
 
@@ -16,7 +15,8 @@
 
 @implementation TVGuideDetailViewController
 
-NSMutableArray *_objects;
+@synthesize _objectsB;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +26,15 @@ NSMutableArray *_objects;
     }
     return self;
 }
+
+//- (id)initWithObjects:(NSMutableArray *)programmaObjects
+//{
+//    self = [super initWithNibName:@"TVGuideDetailViewController" bundle:nil];
+//    if (self) {
+//        _objectsB = [programmaObjects copy];
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad
 {
@@ -69,7 +78,7 @@ NSMutableArray *_objects;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    Programma *thisProgramma = [_objects objectAtIndex:indexPath.row];
+    Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
     cell.textLabel.text = thisProgramma.tijd;
     
     cell.detailTextLabel.text = [[thisProgramma.titel stringByAppendingString:@" - "] stringByAppendingString:thisProgramma.omschrijving];

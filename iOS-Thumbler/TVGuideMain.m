@@ -9,6 +9,7 @@
 #import "TVGuideMain.h"
 #import "TFHpple.h"
 #import "Programma.h"
+#import "TVGuideDetailViewController.h"
 
 @interface TVGuideMain ()
 
@@ -40,9 +41,14 @@
                     [pbarLoading setHidden:true];
                     
                     //load new view and pass data to it
-                    UIViewController *TVGuideDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TVGuideDetailViewID"];
+//                    UITableViewController *detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"TVGuideDetailViewID"];
+//                    [self presentViewController:detailView animated:YES completion:nil];
                     
-                    [self presentViewController:TVGuideDetailViewController animated:YES completion:nil];
+//                    TVGuideDetailViewController *destinationController = [[TVGuideDetailViewController alloc] initWithObjects:_objectsA];
+//                    [self presentViewController:destinationController animated:YES completion:nil];
+                    
+                    [self performSegueWithIdentifier:@"showProgramList" sender:nil];
+                    
                 } else {
                     [lblStatus setText:@"Something went wrong."];
                     [pbarLoading setHidden:true];
@@ -55,6 +61,14 @@
         NSLog(@"Info: %@", @"Something went wrong.");
         
         [lblStatus setText:@"Device is offline."];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showProgramList"]) {
+        TVGuideDetailViewController *destViewController = segue.destinationViewController;
+//        destViewController._objectsB = [_objectsA copy];
+        [destViewController set_objectsB:_objectsA];
     }
 }
 
@@ -113,7 +127,7 @@
 
             
             // 7
-            _objects = newProgrammas;
+            _objectsA = newProgrammas;
             taskSucces = true;
             
         } else {
