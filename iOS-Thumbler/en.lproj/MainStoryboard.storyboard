@@ -173,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdM-8s-yNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="-178"/>
+            <point key="canvasLocation" x="2120" y="-176"/>
         </scene>
         <!--Math Menu - MathGame-->
         <scene sceneID="qiT-v6-qIe">
@@ -453,6 +453,32 @@
             <point key="canvasLocation" x="1621" y="-759"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MathMenu" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MathMenu.h"/>
+        </class>
+        <class className="MathPlay" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MathPlay.h"/>
+            <relationships>
+                <relationship kind="action" name="quitPressed"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TVGuideDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TVGuideDetailViewController.h"/>
+        </class>
+        <class className="TVGuideMain" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TVGuideMain.h"/>
+            <relationships>
+                <relationship kind="action" name="startDownloadPressed"/>
+                <relationship kind="outlet" name="btnStartDownload" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pbarLoading" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

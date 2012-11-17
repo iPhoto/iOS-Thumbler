@@ -74,57 +74,41 @@
 
 -(void) doTask{
     @try {
-        // Try something
+        // Try something: sit on your arse and parse!
         // 1
         NSURL *programmasUrl = [NSURL URLWithString:@"http://www.mtv.com/ontv/schedule/"];
         NSData *programmasHtmlData = [NSData dataWithContentsOfURL:programmasUrl];
         
         // 2
-        TFHpple *programmasParser = [TFHpple hppleWithHTMLData:programmasHtmlData];
+        TFHpple *programmasParser = [TFHpple hppleWithData:programmasHtmlData isXML:NO];
         
         // 3
-        NSString *programmasXpathQueryString = @"//*[@id='schedule']/tbody/tr";
-        NSArray *programmasNodes = [programmasParser searchWithXPathQuery:programmasXpathQueryString];
+//        NSArray *programmasTabel = [programmasParser searchWithXPathQuery:@"//*[@id='schedule']"];
+        NSArray *programmaTijden = [programmasParser searchWithXPathQuery:@"//*/td[@class='lftLne']"];
+        NSArray *programmaTitels = [programmasParser searchWithXPathQuery:@"//*/td/b/a"];
+        NSArray *programmaOmschrijving = [programmasParser searchWithXPathQuery:@"//*/td/span"];
+        NSArray *programmaRating = [programmasParser searchWithXPathQuery:@"//*/td[@class='rhtLne']/a"];
+        
+//        NSLog(@"Info: %@", programmasTabel);
+//        NSLog(@"Info: %@", programmaTijden);
+//        NSLog(@"Info: %@", programmaTitels);
+//        NSLog(@"Info: %@", programmaOmschrijving);
+//        NSLog(@"Info: %@", programmaRating);
         
         // 4
-        NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:programmasNodes.count];
-//        if (programmasNodes.count > 0) {
-//            for (TFHppleElement *element in programmasNodes) {
-//                // 5
-//                Programma *programma = [[Programma alloc] init];
-//                
-//                // 6
-//                //programma.tijd = [[element firstChild] content];
-//                //programma.titel = [element objectForKey:@"href"];
-//                //programma.omschrijving = @"Test omschrijving";
-//                //programma.rating = @"MTV-14";
-//                programma.tijd = @"Test tijd";
-//                programma.titel = @"Test titel";
-//                programma.omschrijving = @"Test omschrijving";
-//                programma.rating = @"MTV-14";
-//                
-//                [newProgrammas addObject:programma];
-//            }
-        
-        if (true) {
-            //10 test objecten!
-            for (int i = 0; i <= 10; i++) {
+        NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:programmaTijden.count];
+        if (programmaTijden.count > 0) {
+            for (int i = 1; i <= programmaTijden.count-2; i++) {
                 // 5
                 Programma *programma = [[Programma alloc] init];
-                
                 // 6
-                //programma.tijd = [[element firstChild] content];
-                //programma.titel = [element objectForKey:@"href"];
-                //programma.omschrijving = @"Test omschrijving";
-                //programma.rating = @"MTV-14";
-                programma.tijd = [NSString stringWithFormat:@"Tijd: %d", i];;
-                programma.titel = @"Test titel";
-                programma.omschrijving = @"Test omschrijving";
-                programma.rating = @"Test rating";
+                programma.tijd = [[programmaTijden objectAtIndex:i] content];
+                programma.titel = [[programmaTitels objectAtIndex:i] content];
+                programma.omschrijving = [[programmaOmschrijving objectAtIndex:i] content];
+                programma.rating = [[programmaRating objectAtIndex:i] content];
                 
                 [newProgrammas addObject:programma];
             }
-
             
             // 7
             _objectsA = newProgrammas;
@@ -136,7 +120,7 @@
     }
     @catch (NSException * e) {
         taskSucces = false;
-        NSLog(@"Exception: %@", e);
+        NSLog(@"Exception (doTask): %@", e);
     }
 }
 
