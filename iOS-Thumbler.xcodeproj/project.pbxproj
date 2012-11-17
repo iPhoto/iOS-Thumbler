@@ -28,6 +28,12 @@
 		7AA604C3164A8D330045331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049D164A8D330045331B /* UIKit.framework */; };
 		7AA604C4164A8D330045331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6049F164A8D330045331B /* Foundation.framework */; };
 		7AF0B5C9164FF4C500A829A0 /* TVGuideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */; };
+		DC0EDD6816584814001462A9 /* tvpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC0EDD6516584814001462A9 /* tvpg.jpg */; };
+		DC0EDD6916584814001462A9 /* tv14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC0EDD6616584814001462A9 /* tv14.jpg */; };
+		DC0EDD6A16584814001462A9 /* tvy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC0EDD6716584814001462A9 /* tvy.jpg */; };
+		DC0EDD6C16584A5A001462A9 /* ProgramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0EDD6B16584A5A001462A9 /* ProgramCell.xib */; };
+		DC0EDD6F16584CCF001462A9 /* ProgramCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0EDD6D16584CCF001462A9 /* ProgramCell.h */; };
+		DC0EDD7016584CCF001462A9 /* ProgramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0EDD6E16584CCF001462A9 /* ProgramCell.m */; };
 		E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF1164F0DBB00F83830 /* MathPlay.m */; };
 		E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF4164F1DAA00F83830 /* MathMenu.m */; };
 /* End PBXBuildFile section */
@@ -72,6 +78,12 @@
 		7AA604C1164A8D330045331B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7AF0B5C7164FF4C500A829A0 /* TVGuideMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVGuideMain.h; sourceTree = "<group>"; };
 		7AF0B5C8164FF4C500A829A0 /* TVGuideMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVGuideMain.m; sourceTree = "<group>"; };
+		DC0EDD6516584814001462A9 /* tvpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tvpg.jpg; sourceTree = "<group>"; };
+		DC0EDD6616584814001462A9 /* tv14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tv14.jpg; sourceTree = "<group>"; };
+		DC0EDD6716584814001462A9 /* tvy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tvy.jpg; sourceTree = "<group>"; };
+		DC0EDD6B16584A5A001462A9 /* ProgramCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramCell.xib; sourceTree = "<group>"; };
+		DC0EDD6D16584CCF001462A9 /* ProgramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramCell.h; sourceTree = "<group>"; };
+		DC0EDD6E16584CCF001462A9 /* ProgramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramCell.m; sourceTree = "<group>"; };
 		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathPlay.h; path = ../MathPlay.h; sourceTree = "<group>"; };
 		E618ACF1164F0DBB00F83830 /* MathPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathPlay.m; path = ../MathPlay.m; sourceTree = "<group>"; };
 		E618ACF3164F1DAA00F83830 /* MathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathMenu.h; path = ../MathMenu.h; sourceTree = "<group>"; };
@@ -108,6 +120,9 @@
 			children = (
 				4E1BF50C1651526800803036 /* Programma.h */,
 				4E1BF50D1651526800803036 /* Programma.m */,
+				DC0EDD6B16584A5A001462A9 /* ProgramCell.xib */,
+				DC0EDD6D16584CCF001462A9 /* ProgramCell.h */,
+				DC0EDD6E16584CCF001462A9 /* ProgramCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 		7AA604A4164A8D330045331B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC0EDD63165847E6001462A9 /* Images */,
 				7AA604A5164A8D330045331B /* iOS-Thumbler-Info.plist */,
 				7AA604A6164A8D330045331B /* InfoPlist.strings */,
 				7AA604A9164A8D330045331B /* main.m */,
@@ -181,6 +197,16 @@
 				7AA604B3164A8D330045331B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC0EDD63165847E6001462A9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DC0EDD6516584814001462A9 /* tvpg.jpg */,
+				DC0EDD6616584814001462A9 /* tv14.jpg */,
+				DC0EDD6716584814001462A9 /* tvy.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		E61A108D164FBFE3003B1465 /* MathGame */ = {
@@ -222,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1BF51C16515CE800803036 /* TVGuideDetailViewController.h in Headers */,
+				DC0EDD6F16584CCF001462A9 /* ProgramCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +329,10 @@
 				7AA604B2164A8D330045331B /* Default@2x.png in Resources */,
 				7AA604B4164A8D330045331B /* Default-568h@2x.png in Resources */,
 				7AA604B7164A8D330045331B /* MainStoryboard.storyboard in Resources */,
+				DC0EDD6816584814001462A9 /* tvpg.jpg in Resources */,
+				DC0EDD6916584814001462A9 /* tv14.jpg in Resources */,
+				DC0EDD6A16584814001462A9 /* tvy.jpg in Resources */,
+				DC0EDD6C16584A5A001462A9 /* ProgramCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +376,7 @@
 				4E1BF5171651538700803036 /* TFHppleElement.m in Sources */,
 				4E1BF5181651538700803036 /* XPathQuery.m in Sources */,
 				4E1BF51D16515CE800803036 /* TVGuideDetailViewController.m in Sources */,
+				DC0EDD7016584CCF001462A9 /* ProgramCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

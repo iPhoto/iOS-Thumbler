@@ -8,6 +8,7 @@
 
 #import "TVGuideDetailViewController.h"
 #import "Programma.h"
+#import "ProgramCell.h"
 
 @interface TVGuideDetailViewController ()
 
@@ -68,21 +69,37 @@
     return _objectsB.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ProgramCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ProgramCell *cell = (ProgramCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
-    cell.textLabel.text = thisProgramma.tijd;
     
-//    cell.detailTextLabel.text = [[thisProgramma.titel stringByAppendingString:@" - "] stringByAppendingString:thisProgramma.omschrijving];
-    cell.detailTextLabel.text = thisProgramma.titel;
-                                  
+    cell.lblTime.text = thisProgramma.tijd;
+    cell.lblTitle.text = thisProgramma.titel;
+    cell.lblDescription.text = thisProgramma.omschrijving;
+    
+    UIImage *ratingPic;
+    if ([thisProgramma.rating isEqualToString:@"TV-PG"]) {
+        ratingPic = [UIImage imageNamed:@"tvpg.jpg"];
+    } else if ([thisProgramma.rating isEqualToString:@"TV-14"]) {
+        ratingPic = [UIImage imageNamed:@"tv14.jpg"];
+    } else {
+        ratingPic = [UIImage imageNamed:@"tvy.jpg"];
+    }
+    
+    cell.picRating.image = ratingPic;
+    
     return cell;
 }
 

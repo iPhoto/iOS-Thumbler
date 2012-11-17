@@ -98,7 +98,7 @@
         // 4
         NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:programmaTijden.count];
         if (programmaTijden.count > 0) {
-            for (int i = 1; i <= programmaTijden.count-2; i++) {
+            for (int i = 0; i <= programmaTijden.count-2; i++) {
                 // 5
                 Programma *programma = [[Programma alloc] init];
                 // 6
