@@ -10,6 +10,8 @@
 
 @interface Programma : NSObject
 
+-(NSString *) description;
+
 @property (nonatomic, copy) NSString *tijd;
 @property (nonatomic, copy) NSString *titel;
 @property (nonatomic, copy) NSString *omschrijving;

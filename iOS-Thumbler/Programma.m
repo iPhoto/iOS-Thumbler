@@ -10,6 +10,11 @@
 
 @implementation Programma
 
+-(NSString *) description {
+    return [NSString stringWithFormat: @"Tijd: %@  Titel: %@  Omschrijving: %@  Rating: %@", _tijd, _titel, _omschrijving, _rating];
+}
+
+
 @synthesize tijd = _tijd;
 @synthesize titel = _titel;
 @synthesize omschrijving = _omschrijving;

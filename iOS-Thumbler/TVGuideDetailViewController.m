@@ -80,8 +80,9 @@
     Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
     cell.textLabel.text = thisProgramma.tijd;
     
-    cell.detailTextLabel.text = [[thisProgramma.titel stringByAppendingString:@" - "] stringByAppendingString:thisProgramma.omschrijving];
-    
+//    cell.detailTextLabel.text = [[thisProgramma.titel stringByAppendingString:@" - "] stringByAppendingString:thisProgramma.omschrijving];
+    cell.detailTextLabel.text = thisProgramma.titel;
+                                  
     return cell;
 }
 

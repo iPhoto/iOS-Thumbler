@@ -102,12 +102,14 @@
                 // 5
                 Programma *programma = [[Programma alloc] init];
                 // 6
-                programma.tijd = [[programmaTijden objectAtIndex:i] content];
-                programma.titel = [[programmaTitels objectAtIndex:i] content];
-                programma.omschrijving = [[programmaOmschrijving objectAtIndex:i] content];
-                programma.rating = [[programmaRating objectAtIndex:i] content];
+                programma.tijd = [[[programmaTijden objectAtIndex:i] firstChild] content];
+                programma.titel = [[[programmaTitels objectAtIndex:i] firstChild] content];
+                programma.omschrijving = [[[programmaOmschrijving objectAtIndex:i] firstChild] content];
+                programma.rating = [[[programmaRating objectAtIndex:i] firstChild] content];
                 
                 [newProgrammas addObject:programma];
+                
+//                NSLog(programma.description);
             }
             
             // 7
