@@ -139,7 +139,7 @@
                         <outlet property="btnStartDownload" destination="Gfq-02-Dvz" id="ac1-Fk-quS"/>
                         <outlet property="lblStatus" destination="Uyz-fj-Hmc" id="fvK-b0-i50"/>
                         <outlet property="pbarLoading" destination="v4f-dr-vHd" id="6ne-DK-IdE"/>
-                        <segue destination="Yl4-Dc-cmT" kind="push" identifier="showProgramList" id="err-gh-ELK"/>
+                        <segue destination="Yl4-Dc-cmT" kind="modal" identifier="showProgramList" id="err-gh-ELK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xM-a9-HpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,7 +151,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="TVGuideDetailViewID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yl4-Dc-cmT" customClass="TVGuideDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gQR-Y3-dO6">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

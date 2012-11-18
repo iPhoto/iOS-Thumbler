@@ -71,7 +71,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 78;
+    return 100;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,6 +101,26 @@
     cell.picRating.image = ratingPic;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(ProgramCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateFormat:@"h:mm a"];// ==> AM/PM stijl
+    //[formatter setDateFormat:@"HH:mm"]; // ==> 24u stijl
+    NSDate *currentDay = [formatter dateFromString:[formatter stringFromDate:[NSDate date]]];
+    Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
+    NSString *stringCellDate = thisProgramma.tijd;
+    NSDate *cellDay = [formatter dateFromString:stringCellDate];
+    
+    NSLog(@"Currentday: %@", currentDay);
+    NSLog(@"Cellday: %@", cellDay);
+    
+    if (cellDay > currentDay) {
+        NSLog(@"Condition: %@", @"true");
+        //cell.contentView.backgroundColor = [UIColor redColor];
+        //cell.lblTime.backgroundColor = [UIColor redColor];
+        [cell setBackgroundColor:[UIColor colorWithRed:107.0/256.0 green:145.0/256.0 blue:35.0/256.0 alpha:1.0]];
+    }
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
