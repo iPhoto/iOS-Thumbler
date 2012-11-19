@@ -107,11 +107,11 @@
     Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
     if (thisProgramma.seen){
         //[cell setBackgroundColor:[UIColor grayColor]];
-        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bad.jpeg"]];
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bad.png"]];
     }
     else
     {
-        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"good.jpg"]];
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"good.png"]];
     }
 }
 

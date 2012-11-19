@@ -98,8 +98,8 @@ bool lastDayReached = false;
         
         // 4
         NSMutableArray *newProgrammas = [[NSMutableArray alloc] initWithCapacity:programmaTijden.count];
-        if (programmaTijden.count > 0) {
-            for (int i = 0; i <= programmaTijden.count-2; i++) {
+        if (programmaTitels.count > 0) {
+            for (int i = 0; i <= programmaTitels.count-1; i++) {
                 // 5
                 Programma *programma = [[Programma alloc] init];
                 // 6
