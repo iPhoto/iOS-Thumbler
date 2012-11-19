@@ -16,5 +16,6 @@
 @property (nonatomic, copy) NSString *titel;
 @property (nonatomic, copy) NSString *omschrijving;
 @property (nonatomic, copy) NSString *rating;
+@property bool *seen;
 
 @end

@@ -20,6 +20,7 @@
 @synthesize lblStatus;
 @synthesize pbarLoading;
 @synthesize btnStartDownload;
+bool lastDayReached = false;
 
 -(IBAction)startDownloadPressed{
     //check if device is online
@@ -106,6 +107,25 @@
                 programma.titel = [[[programmaTitels objectAtIndex:i] firstChild] content];
                 programma.omschrijving = [[[programmaOmschrijving objectAtIndex:i] firstChild] content];
                 programma.rating = [[[programmaRating objectAtIndex:i] firstChild] content];
+                
+                
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"h:mm a"];// ==> AM/PM stijl
+                //[formatter setDateFormat:@"HH:mm"]; // ==> 24u stijl
+                NSDate *currentDay = [formatter dateFromString:[formatter stringFromDate:[NSDate date]]];
+                NSDate *cellDay = [formatter dateFromString:programma.tijd];
+                //    The receiver and anotherDate are exactly equal to each other, NSOrderedSame
+                //    The receiver is later in time than anotherDate, NSOrderedDescending
+                //    The receiver is earlier in time than anotherDate, NSOrderedAscending
+                if (!lastDayReached) {
+                    if ([cellDay compare:currentDay] == NSOrderedAscending) {
+                        programma.seen = YES;
+                    }
+                    else
+                    {
+                        lastDayReached = true;
+                    }
+                }
                 
                 [newProgrammas addObject:programma];
                 

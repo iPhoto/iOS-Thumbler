@@ -17,7 +17,6 @@
 @implementation TVGuideDetailViewController
 
 @synthesize _objectsB;
-bool lastDayReached = false;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -104,49 +103,17 @@ bool lastDayReached = false;
     return cell;
 }
 
-/*
 - (void)tableView:(UITableView *)tableView willDisplayCell:(ProgramCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateFormat:@"h:mm a"];// ==> AM/PM stijl
-    //[formatter setDateFormat:@"HH:mm"]; // ==> 24u stijl
-    NSDate *currentDay = [formatter dateFromString:[formatter stringFromDate:[NSDate date]]];
     Programma *thisProgramma = [_objectsB objectAtIndex:indexPath.row];
-    NSString *stringCellDate = thisProgramma.tijd;
-    NSDate *cellDay = [formatter dateFromString:stringCellDate];
-    
-    NSTimeInterval seconds = [currentDay timeIntervalSinceDate:cellDay];
-    
-    if (seconds < 0){
-        [cell.lblTime setBackgroundColor:[UIColor redColor]];
+    if (thisProgramma.seen){
+        //[cell setBackgroundColor:[UIColor grayColor]];
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bad.jpeg"]];
     }
-    
-    NSLog(@"Seconds: %f", seconds);
-    
-    
-//    The receiver and anotherDate are exactly equal to each other, NSOrderedSame
-//    The receiver is later in time than anotherDate, NSOrderedDescending
-//    The receiver is earlier in time than anotherDate, NSOrderedAscending
-//    if (!lastDayReached) {
-//        if ([cellDay compare:currentDay] == NSOrderedAscending) {
-//            [cell.lblTime setBackgroundColor:[UIColor redColor]];
-//        }
-//        else
-//        {
-//            lastDayReached = true;
-//        }
-//    }
-//
-//    NSLog(@"Currentday: %@", currentDay);
-//    NSLog(@"Cellday: %@", cellDay);
-    
-//    if (cellDay > currentDay) {
-//        NSLog(@"Condition: %@", @"true");
-//        //cell.contentView.backgroundColor = [UIColor redColor];
-//        //cell.lblTime.backgroundColor = [UIColor redColor];
-//        [cell setBackgroundColor:[UIColor colorWithRed:107.0/256.0 green:145.0/256.0 blue:35.0/256.0 alpha:1.0]];
-//    }
+    else
+    {
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"good.jpg"]];
+    }
 }
-*/
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"Programma's";

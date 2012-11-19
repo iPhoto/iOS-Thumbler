@@ -19,5 +19,6 @@
 @synthesize titel = _titel;
 @synthesize omschrijving = _omschrijving;
 @synthesize rating = _rating;
+@synthesize seen = _seen;
 
 @end
