@@ -626,11 +626,39 @@
             <objects>
                 <viewController title="GPSCamere" id="1Xc-aU-7Hy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H95-dL-H7H">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="idE-0E-xQu">
+                                <items>
+                                    <barButtonItem title="Album" id="AKh-dK-LEz"/>
+                                    <barButtonItem enabled="NO" systemItem="camera" id="DTp-id-6V4"/>
+                                    <barButtonItem width="77" style="plain" systemItem="fixedSpace" id="LhB-Qd-g7z"/>
+                                    <barButtonItem title="Login" id="nlr-Kp-JDm"/>
+                                    <barButtonItem enabled="NO" title="Filter" id="cOm-G2-mur"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tXg-oK-nag">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="daL-oT-Cdf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="idE-0E-xQu" firstAttribute="top" secondItem="tXg-oK-nag" secondAttribute="bottom" type="default" id="1qm-Bj-y7a"/>
+                            <constraint firstItem="tXg-oK-nag" firstAttribute="leading" secondItem="H95-dL-H7H" secondAttribute="leading" type="default" id="DKp-jb-paZ"/>
+                            <constraint firstItem="idE-0E-xQu" firstAttribute="bottom" secondItem="H95-dL-H7H" secondAttribute="bottom" type="default" id="IMU-Ps-3ov"/>
+                            <constraint firstItem="idE-0E-xQu" firstAttribute="leading" secondItem="H95-dL-H7H" secondAttribute="leading" type="default" id="QGn-kU-0vi"/>
+                            <constraint firstItem="idE-0E-xQu" firstAttribute="trailing" secondItem="H95-dL-H7H" secondAttribute="trailing" type="default" id="QKh-Id-nws"/>
+                            <constraint firstItem="tXg-oK-nag" firstAttribute="trailing" secondItem="H95-dL-H7H" secondAttribute="trailing" type="default" id="cGd-Gn-c8A"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="GPS Camera" id="k5b-IX-3h9"/>
+                    <navigationItem key="navigationItem" id="k5b-IX-3h9">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="hLe-qG-xnh"/>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kE-Tt-yxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

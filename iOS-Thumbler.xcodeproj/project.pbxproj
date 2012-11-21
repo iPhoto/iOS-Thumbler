@@ -38,8 +38,22 @@
 		DC660A1D165D25E6006DBD8C /* MathOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC660A1B165D25E6006DBD8C /* MathOptions.m */; };
 		DC660A21165D25F5006DBD8C /* MathResult.h in Headers */ = {isa = PBXBuildFile; fileRef = DC660A1F165D25F5006DBD8C /* MathResult.h */; };
 		DC660A22165D25F5006DBD8C /* MathResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC660A20165D25F5006DBD8C /* MathResult.m */; };
+		DC87D9BA165D5DD300A815D4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA604C1164A8D330045331B /* SenTestingKit.framework */; };
+		DC87DB24165D5E4200A815D4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB23165D5E4200A815D4 /* Accounts.framework */; };
+		DC87DB26165D5E4900A815D4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB25165D5E4900A815D4 /* AdSupport.framework */; };
+		DC87DB28165D5E5000A815D4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB27165D5E5000A815D4 /* Social.framework */; };
+		DC87DB2A165D5E5800A815D4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB29165D5E5800A815D4 /* ImageIO.framework */; };
+		DC87DB2C165D5E6000A815D4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB2B165D5E6000A815D4 /* AssetsLibrary.framework */; };
+		DC87DB2E165D5E6F00A815D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB2D165D5E6F00A815D4 /* CoreLocation.framework */; };
+		DC87DB30165D5E7300A815D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB2F165D5E7300A815D4 /* QuartzCore.framework */; };
+		DC87DB32165D5E7C00A815D4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB31165D5E7C00A815D4 /* AVFoundation.framework */; };
+		DC87DB34165D5E8400A815D4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB33165D5E8400A815D4 /* OpenGLES.framework */; };
+		DC87DB36165D5E8A00A815D4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB35165D5E8A00A815D4 /* CoreVideo.framework */; };
+		DC87DB38165D5E9000A815D4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC87DB37165D5E9000A815D4 /* CoreMedia.framework */; };
 		DCC4BDB0165A887F00BA412D /* bad.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC4BDAE165A887F00BA412D /* bad.png */; };
 		DCC4BDB1165A887F00BA412D /* good.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC4BDAF165A887F00BA412D /* good.png */; };
+		DCECF870165D608C00CDC6DC /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCECF86E165D608C00CDC6DC /* FacebookSDKResources.bundle */; };
+		DCECF871165D608C00CDC6DC /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCECF86F165D608C00CDC6DC /* FBUserSettingsViewResources.bundle */; };
 		E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF1164F0DBB00F83830 /* MathPlay.m */; };
 		E618ACF5164F1DAA00F83830 /* MathMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF4164F1DAA00F83830 /* MathMenu.m */; };
 /* End PBXBuildFile section */
@@ -94,8 +108,21 @@
 		DC660A1B165D25E6006DBD8C /* MathOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOptions.m; sourceTree = "<group>"; };
 		DC660A1F165D25F5006DBD8C /* MathResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathResult.h; sourceTree = "<group>"; };
 		DC660A20165D25F5006DBD8C /* MathResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathResult.m; sourceTree = "<group>"; };
+		DC87DB23165D5E4200A815D4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		DC87DB25165D5E4900A815D4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		DC87DB27165D5E5000A815D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DC87DB29165D5E5800A815D4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		DC87DB2B165D5E6000A815D4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DC87DB2D165D5E6F00A815D4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC87DB2F165D5E7300A815D4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC87DB31165D5E7C00A815D4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DC87DB33165D5E8400A815D4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DC87DB35165D5E8A00A815D4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		DC87DB37165D5E9000A815D4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DCC4BDAE165A887F00BA412D /* bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bad.png; sourceTree = "<group>"; };
 		DCC4BDAF165A887F00BA412D /* good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good.png; sourceTree = "<group>"; };
+		DCECF86E165D608C00CDC6DC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		DCECF86F165D608C00CDC6DC /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathPlay.h; path = ../MathPlay.h; sourceTree = "<group>"; };
 		E618ACF1164F0DBB00F83830 /* MathPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathPlay.m; path = ../MathPlay.m; sourceTree = "<group>"; };
 		E618ACF3164F1DAA00F83830 /* MathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathMenu.h; path = ../MathMenu.h; sourceTree = "<group>"; };
@@ -107,10 +134,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC87DB38165D5E9000A815D4 /* CoreMedia.framework in Frameworks */,
+				DC87DB36165D5E8A00A815D4 /* CoreVideo.framework in Frameworks */,
+				DC87DB34165D5E8400A815D4 /* OpenGLES.framework in Frameworks */,
+				DC87DB32165D5E7C00A815D4 /* AVFoundation.framework in Frameworks */,
+				DC87DB30165D5E7300A815D4 /* QuartzCore.framework in Frameworks */,
+				DC87DB2E165D5E6F00A815D4 /* CoreLocation.framework in Frameworks */,
+				DC87DB2C165D5E6000A815D4 /* AssetsLibrary.framework in Frameworks */,
+				DC87DB2A165D5E5800A815D4 /* ImageIO.framework in Frameworks */,
+				DC87DB28165D5E5000A815D4 /* Social.framework in Frameworks */,
+				DC87DB26165D5E4900A815D4 /* AdSupport.framework in Frameworks */,
+				DC87DB24165D5E4200A815D4 /* Accounts.framework in Frameworks */,
+				7AA604A2164A8D330045331B /* CoreGraphics.framework in Frameworks */,
+				7AA604A0164A8D330045331B /* Foundation.framework in Frameworks */,
 				4E1BF4FC1651368300803036 /* SystemConfiguration.framework in Frameworks */,
 				7AA6049E164A8D330045331B /* UIKit.framework in Frameworks */,
-				7AA604A0164A8D330045331B /* Foundation.framework in Frameworks */,
-				7AA604A2164A8D330045331B /* CoreGraphics.framework in Frameworks */,
+				DC87D9BA165D5DD300A815D4 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +194,17 @@
 		7AA6048E164A8D320045331B = {
 			isa = PBXGroup;
 			children = (
+				DC87DB37165D5E9000A815D4 /* CoreMedia.framework */,
+				DC87DB35165D5E8A00A815D4 /* CoreVideo.framework */,
+				DC87DB33165D5E8400A815D4 /* OpenGLES.framework */,
+				DC87DB31165D5E7C00A815D4 /* AVFoundation.framework */,
+				DC87DB2F165D5E7300A815D4 /* QuartzCore.framework */,
+				DC87DB2D165D5E6F00A815D4 /* CoreLocation.framework */,
+				DC87DB2B165D5E6000A815D4 /* AssetsLibrary.framework */,
+				DC87DB29165D5E5800A815D4 /* ImageIO.framework */,
+				DC87DB27165D5E5000A815D4 /* Social.framework */,
+				DC87DB25165D5E4900A815D4 /* AdSupport.framework */,
+				DC87DB23165D5E4200A815D4 /* Accounts.framework */,
 				4E1BF4FB1651368300803036 /* SystemConfiguration.framework */,
 				7AA604A3164A8D330045331B /* iOS-Thumbler */,
 				7AA6049C164A8D330045331B /* Frameworks */,
@@ -174,6 +224,8 @@
 		7AA6049C164A8D330045331B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCECF86E165D608C00CDC6DC /* FacebookSDKResources.bundle */,
+				DCECF86F165D608C00CDC6DC /* FBUserSettingsViewResources.bundle */,
 				7AA6049D164A8D330045331B /* UIKit.framework */,
 				7AA6049F164A8D330045331B /* Foundation.framework */,
 				7AA604A1164A8D330045331B /* CoreGraphics.framework */,
@@ -355,6 +407,8 @@
 				DC0EDD6C16584A5A001462A9 /* ProgramCell.xib in Resources */,
 				DCC4BDB0165A887F00BA412D /* bad.png in Resources */,
 				DCC4BDB1165A887F00BA412D /* good.png in Resources */,
+				DCECF870165D608C00CDC6DC /* FacebookSDKResources.bundle in Resources */,
+				DCECF871165D608C00CDC6DC /* FBUserSettingsViewResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,11 +548,22 @@
 		7AA604D3164A8D330045331B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-Thumbler/iOS-Thumbler-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "iOS-Thumbler/iOS-Thumbler-Info.plist";
-				OTHER_LDFLAGS = "-lxml2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -507,11 +572,22 @@
 		7AA604D4164A8D330045331B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-Thumbler/iOS-Thumbler-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "iOS-Thumbler/iOS-Thumbler-Info.plist";
-				OTHER_LDFLAGS = "-lxml2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
