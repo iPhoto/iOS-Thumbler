@@ -7,13 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+    CameraViewController *camera = [[CameraViewController alloc] init];
+    
+    // See if we have a valid token for the current state.
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        // To-do, show logged in view
+    } else {
+        // No, display the login page.
+        [camera showLoginView];
+        return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
