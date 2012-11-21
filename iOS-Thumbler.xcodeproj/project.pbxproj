@@ -34,6 +34,10 @@
 		DC0EDD6C16584A5A001462A9 /* ProgramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0EDD6B16584A5A001462A9 /* ProgramCell.xib */; };
 		DC0EDD6F16584CCF001462A9 /* ProgramCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0EDD6D16584CCF001462A9 /* ProgramCell.h */; };
 		DC0EDD7016584CCF001462A9 /* ProgramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0EDD6E16584CCF001462A9 /* ProgramCell.m */; };
+		DC660A1C165D25E6006DBD8C /* MathOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC660A1A165D25E6006DBD8C /* MathOptions.h */; };
+		DC660A1D165D25E6006DBD8C /* MathOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC660A1B165D25E6006DBD8C /* MathOptions.m */; };
+		DC660A21165D25F5006DBD8C /* MathResult.h in Headers */ = {isa = PBXBuildFile; fileRef = DC660A1F165D25F5006DBD8C /* MathResult.h */; };
+		DC660A22165D25F5006DBD8C /* MathResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC660A20165D25F5006DBD8C /* MathResult.m */; };
 		DCC4BDB0165A887F00BA412D /* bad.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC4BDAE165A887F00BA412D /* bad.png */; };
 		DCC4BDB1165A887F00BA412D /* good.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC4BDAF165A887F00BA412D /* good.png */; };
 		E618ACF2164F0DBB00F83830 /* MathPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E618ACF1164F0DBB00F83830 /* MathPlay.m */; };
@@ -86,6 +90,10 @@
 		DC0EDD6B16584A5A001462A9 /* ProgramCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramCell.xib; sourceTree = "<group>"; };
 		DC0EDD6D16584CCF001462A9 /* ProgramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramCell.h; sourceTree = "<group>"; };
 		DC0EDD6E16584CCF001462A9 /* ProgramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramCell.m; sourceTree = "<group>"; };
+		DC660A1A165D25E6006DBD8C /* MathOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOptions.h; sourceTree = "<group>"; };
+		DC660A1B165D25E6006DBD8C /* MathOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOptions.m; sourceTree = "<group>"; };
+		DC660A1F165D25F5006DBD8C /* MathResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathResult.h; sourceTree = "<group>"; };
+		DC660A20165D25F5006DBD8C /* MathResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathResult.m; sourceTree = "<group>"; };
 		DCC4BDAE165A887F00BA412D /* bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bad.png; sourceTree = "<group>"; };
 		DCC4BDAF165A887F00BA412D /* good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good.png; sourceTree = "<group>"; };
 		E618ACF0164F0DBB00F83830 /* MathPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathPlay.h; path = ../MathPlay.h; sourceTree = "<group>"; };
@@ -222,6 +230,10 @@
 				E618ACF4164F1DAA00F83830 /* MathMenu.m */,
 				E618ACF0164F0DBB00F83830 /* MathPlay.h */,
 				E618ACF1164F0DBB00F83830 /* MathPlay.m */,
+				DC660A1A165D25E6006DBD8C /* MathOptions.h */,
+				DC660A1B165D25E6006DBD8C /* MathOptions.m */,
+				DC660A1F165D25F5006DBD8C /* MathResult.h */,
+				DC660A20165D25F5006DBD8C /* MathResult.m */,
 			);
 			name = MathGame;
 			sourceTree = "<group>";
@@ -255,6 +267,8 @@
 			files = (
 				4E1BF51C16515CE800803036 /* TVGuideDetailViewController.h in Headers */,
 				DC0EDD6F16584CCF001462A9 /* ProgramCell.h in Headers */,
+				DC660A1C165D25E6006DBD8C /* MathOptions.h in Headers */,
+				DC660A21165D25F5006DBD8C /* MathResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +399,8 @@
 				4E1BF5181651538700803036 /* XPathQuery.m in Sources */,
 				4E1BF51D16515CE800803036 /* TVGuideDetailViewController.m in Sources */,
 				DC0EDD7016584CCF001462A9 /* ProgramCell.m in Sources */,
+				DC660A1D165D25E6006DBD8C /* MathOptions.m in Sources */,
+				DC660A22165D25F5006DBD8C /* MathResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

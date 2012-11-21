@@ -8,8 +8,32 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MathPlay : UIViewController
+//extern NSMutableArray *goodAnswers;
+//extern NSMutableArray *badAnswers;
+
+@interface MathPlay : UIViewController{
+    int numberOfQuestions;
+    
+    IBOutlet UIButton *btnOne;
+    IBOutlet UIButton *btnTwo;
+    IBOutlet UIButton *btnThree;
+    IBOutlet UIButton *btnFour;
+    
+    IBOutlet UILabel *lblQuestion;
+    IBOutlet UILabel *lblCurrentQuestion;
+    
+    NSMutableArray *goodAnswers;
+    NSMutableArray *badAnswers;
+    
+}
+
+//@property (retain, nonatomic) NSMutableArray *goodAnswers;
+//@property (retain, nonatomic) NSMutableArray *badAnswers;
+
+@property (retain, nonatomic) NSString *difPlay;
+@property (retain, nonatomic) NSString *numberOfQuestionsPlay;
 
 -(IBAction)quitPressed;
+-(IBAction)answerPressed:(id)sender;
 
 @end

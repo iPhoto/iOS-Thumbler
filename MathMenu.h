@@ -10,4 +10,11 @@
 
 @interface MathMenu : UIViewController
 
+
+@property (retain, nonatomic) NSString *difMenu;
+@property (retain, nonatomic) NSString *NumberOfQuestionsMenu;
+
+- (IBAction)btnOptions:(id)sender;
+
 @end
+
