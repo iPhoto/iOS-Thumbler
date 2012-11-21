@@ -5,7 +5,6 @@
 //  Created by Geoffry Nagy on 20/11/12.
 //  Copyright (c) 2012 PHL. All rights reserved.
 //
-
 #import "CameraViewController.h"
 #import "GPUImage.h"
 #import <CoreLocation/CoreLocation.h>

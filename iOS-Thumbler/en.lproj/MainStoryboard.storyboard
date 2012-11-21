@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PJg-a0-moj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PJg-a0-moj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwC-XX-AXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="982"/>
+            <point key="canvasLocation" x="1621" y="1054"/>
         </scene>
         <!--Math Result - Result-->
         <scene sceneID="wJm-bf-0Ci">
@@ -546,7 +546,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0F-BL-Ne2">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="1mh-4b-919"/>
-                                    <constraint firstAttribute="height" constant="334" id="2Ah-nF-SHy"/>
+                                    <constraint firstAttribute="height" constant="201" id="Scl-3v-YbP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -570,18 +570,33 @@
                                     <navigationItem title="Results" id="hYO-V7-gTJ"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-3x-3nS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="oAi-2O-TyP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Quit / Save">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="R21-Nf-UBI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="23f-w8-CUU"/>
                             <constraint firstItem="R21-Nf-UBI" firstAttribute="top" secondItem="S0F-BL-Ne2" secondAttribute="top" type="default" id="4lB-Rv-aG4"/>
+                            <constraint firstItem="S0F-BL-Ne2" firstAttribute="baseline" secondItem="R21-Nf-UBI" secondAttribute="baseline" type="default" id="FbJ-JZ-fLg"/>
                             <constraint firstItem="S0F-BL-Ne2" firstAttribute="leading" secondItem="QeP-2g-QHd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ivd-KO-dNa"/>
                             <constraint firstItem="3oe-kL-PVw" firstAttribute="centerX" secondItem="UWq-xk-ucM" secondAttribute="centerX" type="default" id="M73-wL-c4E"/>
-                            <constraint firstAttribute="bottom" secondItem="R21-Nf-UBI" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="N2c-oQ-Jch"/>
                             <constraint firstItem="UWq-xk-ucM" firstAttribute="top" secondItem="QeP-2g-QHd" secondAttribute="top" type="default" id="gpB-zW-Cb5"/>
-                            <constraint firstAttribute="bottom" secondItem="S0F-BL-Ne2" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="mLr-W8-RzS"/>
                             <constraint firstItem="UWq-xk-ucM" firstAttribute="trailing" secondItem="QeP-2g-QHd" secondAttribute="trailing" type="default" id="pmv-lH-KKI"/>
+                            <constraint firstItem="BF6-3x-3nS" firstAttribute="centerX" secondItem="3oe-kL-PVw" secondAttribute="centerX" type="default" id="tQK-Bl-fGb"/>
                             <constraint firstItem="UWq-xk-ucM" firstAttribute="leading" secondItem="QeP-2g-QHd" secondAttribute="leading" type="default" id="tgE-v9-uw6"/>
+                            <constraint firstAttribute="bottom" secondItem="BF6-3x-3nS" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xiP-eK-Qy5"/>
+                            <constraint firstItem="S0F-BL-Ne2" firstAttribute="top" secondItem="QeP-2g-QHd" secondAttribute="top" constant="106" id="xnJ-QF-asI"/>
                             <constraint firstItem="3oe-kL-PVw" firstAttribute="top" secondItem="QeP-2g-QHd" secondAttribute="top" constant="58" id="yIn-ck-dB4"/>
                         </constraints>
                     </view>
@@ -605,6 +620,19 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WdI-De-Fbz">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <navigationBar key="tableFooterView" contentMode="scaleToFill" id="FjJ-XW-dI6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <items>
+                                        <navigationItem title="Highscores" id="qIZ-ZQ-6BH">
+                                            <barButtonItem key="leftBarButtonItem" title="Menu" id="Aol-9U-mjk">
+                                                <connections>
+                                                    <segue destination="nOc-Gh-G8l" kind="modal" id="U7E-dx-HLa"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -727,7 +755,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="U7E-dx-HLa"/>
         <segue reference="tDJ-zG-Src"/>
-        <segue reference="CUt-dO-nIk"/>
     </inferredMetricsTieBreakers>
 </document>
